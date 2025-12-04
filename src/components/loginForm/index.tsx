@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Form } from "../form/form";
+import { Form, FormField } from "../form/form";
 import { LoginFormProps } from "@/@types/type";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginSchema } from "@/schema/schema";
@@ -16,7 +16,13 @@ export function LoginForm() {
 
     return(
         <Form {...form} >
-            sasa
+            <FormField
+                name="email"
+                control={form.control}
+                render={({field}) => (
+                    
+                )}
+            />
         </Form>
     )
 }
